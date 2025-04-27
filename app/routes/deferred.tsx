@@ -1,4 +1,3 @@
-// app/routes/index.tsx
 import { createFileRoute, useRouter, Await, defer } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
 import { customersGet } from '@/db/customerModel'

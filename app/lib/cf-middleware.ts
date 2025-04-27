@@ -1,9 +1,9 @@
 import { createMiddleware } from '@tanstack/react-start'
-const wrangler = await import('wrangler');
-const { env } = await wrangler.getPlatformProxy<Env>();
 
-export const cloudflareMiddleware = createMiddleware().server(({ next }) => {
+export const cloudflareMiddleware = createMiddleware().server(async ({ next }) => {
     if (import.meta.env.DEV) {
+        const wrangler = await import('wrangler');
+        const { env } = await wrangler.getPlatformProxy<Env>();
         return next({
             context: {
                 cloudflare: env,

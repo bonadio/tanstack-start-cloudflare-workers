@@ -10,7 +10,7 @@ compatibility_flags  =  ["nodejs_compat"]
 
 
 # Use a recent compatibility date
-compatibility_date  =  "2024-09-19"  # Or a later date
+compatibility_date  =  "2024-09-23"  # Or a later date
 
 # Example: Serve static assets built by Vinxi/Vite
 # The binding name "ASSETS" must match how you reference it in your server code (if needed)
