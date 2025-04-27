@@ -1,0 +1,4 @@
+CREATE TABLE "customer" (
+	"id"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"name"	TEXT
+)
