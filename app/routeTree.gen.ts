@@ -11,14 +11,14 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as DeferedImport } from './routes/defered'
+import { Route as DeferredImport } from './routes/deferred'
 import { Route as IndexImport } from './routes/index'
 
 // Create/Update Routes
 
-const DeferedRoute = DeferedImport.update({
-  id: '/defered',
-  path: '/defered',
+const DeferredRoute = DeferredImport.update({
+  id: '/deferred',
+  path: '/deferred',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -39,11 +39,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/defered': {
-      id: '/defered'
-      path: '/defered'
-      fullPath: '/defered'
-      preLoaderRoute: typeof DeferedImport
+    '/deferred': {
+      id: '/deferred'
+      path: '/deferred'
+      fullPath: '/deferred'
+      preLoaderRoute: typeof DeferredImport
       parentRoute: typeof rootRoute
     }
   }
@@ -53,37 +53,37 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/defered': typeof DeferedRoute
+  '/deferred': typeof DeferredRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/defered': typeof DeferedRoute
+  '/deferred': typeof DeferredRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/defered': typeof DeferedRoute
+  '/deferred': typeof DeferredRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/defered'
+  fullPaths: '/' | '/deferred'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/defered'
-  id: '__root__' | '/' | '/defered'
+  to: '/' | '/deferred'
+  id: '__root__' | '/' | '/deferred'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DeferedRoute: typeof DeferedRoute
+  DeferredRoute: typeof DeferredRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DeferedRoute: DeferedRoute,
+  DeferredRoute: DeferredRoute,
 }
 
 export const routeTree = rootRoute
@@ -97,14 +97,14 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/defered"
+        "/deferred"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/defered": {
-      "filePath": "defered.tsx"
+    "/deferred": {
+      "filePath": "deferred.tsx"
     }
   }
 }

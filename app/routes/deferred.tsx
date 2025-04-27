@@ -11,15 +11,15 @@ const getCustomersDeferred = createServerFn({method: 'GET'})
     })
 
 
-export const Route = createFileRoute('/defered')({
-    component: Defered,
+export const Route = createFileRoute('/deferred')({
+    component: Deferred,
     loader: async () => {
         const customers = getCustomersDeferred()
         return { deferredCustomers: customers }
     },
 })
 
-function Defered() {
+function Deferred() {
     const {deferredCustomers} = Route.useLoaderData()
 
     return (
