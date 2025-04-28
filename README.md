@@ -4,7 +4,7 @@ This is a template to work with tanstack start with cloudflare workers
 
 - It uses Drizzle-orm and D1 as database
 - It loads cloudflare variables and bindings using a middleware
-- deferred route shows how to load data using defered and Await
+- deferred route shows how to load data using deferred and Await
 - index route loads data on the server SSR
 
 
@@ -15,5 +15,5 @@ This is a template to work with tanstack start with cloudflare workers
 5. Add data `npx wrangler d1 execute test-tanstack-start --command "INSERT INTO "customer" VALUES (1,'Customer 1'); INSERT INTO "customer" VALUES (2,'Customer 2');"`
 6. npm run dev 
 7. Go to http://localhost:3000/deferred show loading than data
-8. To deploy to cloudflare, edit wrangler.toml and adjust D1 database_id than "npm run deploy"  
+8. To deploy to cloudflare "npm run deploy" before you deploy run the above D1 commands with --remote to create the remote database  
 
