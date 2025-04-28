@@ -10,8 +10,10 @@ This is a template to work with tanstack start with cloudflare workers
 
 1. Clone this repo
 2. npm install
-3. npm run dev 
-4. Go to http://localhost:3000/ (this page should error, but it will create .wrangler/state/v3/d1 sqlite database, open it and create the customer table and add data). Stop and start again "npm run dev" now your data should show.
-5. Go to http://localhost:3000/deferred show loading than data
-6. To deploy to cloudflare, edit wrangler.toml and adjust D1 database_id than "npm run deploy" 
+3. Create D1 database `npx wrangler d1 create test-tanstack-start` this will return database_id update it in wrangler.toml
+4. Create Local database schema `npx wrangler d1 execute test-tanstack-start --command "CREATE TABLE IF NOT EXISTS customer (id INTEGER PRIMARY KEY, name TEXT NOT NULL)"`
+5. Add data `npx wrangler d1 execute test-tanstack-start --command "INSERT INTO "customer" VALUES (1,'Customer 1'); INSERT INTO "customer" VALUES (2,'Customer 2');"`
+6. npm run dev 
+7. Go to http://localhost:3000/deferred show loading than data
+8. To deploy to cloudflare, edit wrangler.toml and adjust D1 database_id than "npm run deploy"  
 
