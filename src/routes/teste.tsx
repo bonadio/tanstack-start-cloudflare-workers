@@ -12,7 +12,7 @@ const getCustomers = createServerFn({method: 'GET'})
     })
 
 
-export const Route = createFileRoute('/')({
+export const Route = createFileRoute('/teste')({
     component: Home,
     loader: async () => await getCustomers(),
 })

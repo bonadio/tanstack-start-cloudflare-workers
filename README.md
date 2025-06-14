@@ -17,3 +17,4 @@ This is a template to work with tanstack start with cloudflare workers
 7. Go to http://localhost:3000/deferred show loading than data
 8. To deploy to cloudflare "npm run deploy" before you deploy run the above D1 commands with --remote to create the remote database  
 
+## This version now workes with Tanstack Start version 1.121

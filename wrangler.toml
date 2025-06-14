@@ -15,7 +15,7 @@ compatibility_date  =  "2024-09-23"  # Or a later date
 # Example: Serve static assets built by Vinxi/Vite
 # The binding name "ASSETS" must match how you reference it in your server code (if needed)
 # Check Vinxi/Nitro Cloudflare preset docs for asset handling specifics.
-# assets = { directory = "./.output/public/", binding = "ASSETS" }
+assets = { directory = "./.output/public/", binding = "ASSETS" }
 
 # database D1
 d1_databases = [
