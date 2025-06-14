@@ -10,6 +10,10 @@ export default defineConfig({
         projects: ['./tsconfig.json'],
       }),
     ],
+    build: {
+        // set to false to see vinxi output
+        minify: false,
+    },
   },
   server:  {
 	preset:  "cloudflare-module",
